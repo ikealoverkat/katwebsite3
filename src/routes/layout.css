@@ -1,0 +1,18 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+@theme {
+    --color-light-blue: #e3f7fe;
+    --color-light-yellow: #fdf19e;
+    --color-pink: #fba3d1;
+    --color-blue: #3660fb;
+    --color-teal: #1ac4d6;
+    --color-red: #ec1c24;
+    --color-dark-blue: #1c3d78;
+    --color-cream: #FFFCFA;
+    --color-dark-pink: #e63888;
+}
+
+* {
+    font-family:'Times New Roman', Times, serif;
+}
