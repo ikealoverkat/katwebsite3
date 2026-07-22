@@ -230,7 +230,7 @@
 					<img src="/imgs/landing/intern-3.PNG" alt="athena team dinner" />
 				</div>
 				<div class="mr-20 flex flex-col text-left">
-					<h1 class="text-[48px] leading-12 text-dark-blue font-bold">LISTEN TO BEABADOOBEE</h1>
+					<h1 class="text-[48px] leading-12 font-bold text-dark-blue">LISTEN TO BEABADOOBEE</h1>
 					<p class="mb-2 text-[24px] text-dark-blue italic">since june 2022</p>
 					<p class="text-[24px] text-dark-blue">
 						I LOVE BEABADOOBEE <br />
@@ -241,17 +241,33 @@
 			</div>
 		</div>
 		<!-- send a message -->
-		<div class="mt-36 outline outline-blue bg-light-teal drop-shadow-xl drop-shadow-black/25 p-18 m-10 w-11/18 justify-self-center justify-items-center items-center text-center align-middle">
+		<div
+			class="m-10 mt-36 w-11/18 items-center justify-items-center justify-self-center bg-light-teal p-18 text-center align-middle outline outline-blue drop-shadow-xl drop-shadow-black/25"
+		>
 			<h1 class="text-[48px] text-dark-blue">send a message to kat</h1>
 			<p class="text-[24px] text-dark-blue">here are some preset options</p>
-			<div class="flex flex-row gap-6 m-8">
+			<div class="m-8 flex flex-row gap-6">
 				<button class="message-button bg-pink">you have too many words on your website</button>
 				<button class="message-button bg-light-yellow">fih ahh fih</button>
-				<button class="message-button bg-[#b9cbfe]">No <br/> I am working</button>
+				<button class="message-button bg-[#b9cbfe]">No <br /> I am working</button>
 			</div>
 			<p class="text-[24px] text-dark-blue">or you can</p>
-			<input placeholder="write a message..." type="text" class="outline message-custom"/>
-			<input type="submit" value="cool!" class="outline message-submit"/>
+			<input placeholder="write a message..." type="text" class="message-custom outline" />
+			<input type="submit" value="cool!" class="message-submit outline" />
 		</div>
+	</div>
+	<!-- footer -->
+	<div class="items-center justify-center text-center p-20 bg-white">
+		<h2 class="text-[24px] leading-[28px] text-dark-blue">
+			© kat wang 2026
+			<br /> made with &lt;3 and <img src="/imgs/dietcoke.png" alt="diet coke" class="w-[18px] inline" />
+		</h2>
+		<h2 class="text-[18px] text-dark-blue mt-4">
+			vaguely inspired by <a
+				href="dominicfike.com"
+				target="_blank"
+				class="text-blue underline hover:decoration-wavy">dominicfike.com</a
+			>
+		</h2>
 	</div>
 </div>
