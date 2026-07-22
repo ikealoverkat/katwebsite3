@@ -11,7 +11,7 @@
 
 	onMount(() => {
 		const interval = setInterval(() => {
-			currentImgNumber = (currentImgNumber + 1) % imagePaths.length;
+			currentImgNumber = (currentImgNumber + 1) % (imagePaths.length);
 		}, 5000);
 
 		return () => clearInterval(interval);
@@ -33,7 +33,7 @@
 	<!-- main -->
 	<div>
 		<!-- hero -->
-		<div class="flex justify-center m-16 gap-8">
+		<div class="-my-16 flex w-screen h-screen justify-center items-center gap-8">
 			<div class="relative h-[20rem] w-[22rem] outline-1 outline-dark-blue">
 				{#key currentImage}
 					<!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -65,6 +65,23 @@
                     <a href="https://github.com/ikealoverkat" class="contact-item"><img src="/imgs/contact-gh.png" alt="link to my github"/></a>
                     <a href="https://hackclub.enterprise.slack.com/team/U08H34LLQQJ" class="contact-item"><img src="/imgs/contact-slack.png" alt="send a slack dm!"/></a>                                                            
                 </div> 
+			</div>
+		</div>
+		<!-- what does she even do -->
+		 <div class="m-20">
+			<h2 class="font-bold text-dark-pink underline text-[32px] m-4">WHAT DOES SHE EVEN DO??</h2>
+			<div class="flex flex-row gap-14 ml-12">
+				<div class="*:h-40 min-w-7/16 justify-center items-center *:outline *:outline-dark-blue *:object-cover flex flex-row gap-4">
+					<img src="/imgs/landing/intern-1.PNG" alt="intern group photo"/>
+					<img src="/imgs/landing/intern-2.jpg" alt="nice scenery"/>
+					<img src="/imgs/landing/intern-3.PNG" alt="athena team dinner"/>					
+										
+				</div>
+				<div class="flex flex-col text-left mr-20">
+					<h1 class="text-[48px] text-red leading-12">hack club athena intern</h1>
+					<p class="italic text-[24px] text-dark-blue mb-2">june-july 2026 • <a href="placeholder" class="underline text-blue hover:decoration-wavy">see the blog post here</a></p>
+					<p class="text-[24px] text-dark-blue">For a month, I worked a 9-5 at <a href="hackclub.com" class="underline text-blue hover:decoration-wavy">hack club</a>, a tech nonprofit with an active community of 100k+ teens that gives teens free prizes for building technnical projects. I worked specifically for <a href="athena.hackclub.com" class="text-blue underline hover:decoration-wavy">athena</a>, a part of the nonprofit that focuses on getting more girls into tech. made brands, websites, and illustrations. Also lived in a dorm with 24 other interns. cool!</p>
+				</div>
 			</div>
 		</div>
 	</div>
