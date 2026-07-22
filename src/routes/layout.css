@@ -16,3 +16,14 @@
 * {
     font-family:'Times New Roman', Times, serif;
 }
+
+.contact-item {
+    transition-duration: 0.1s;
+    filter: drop-shadow(0px 2px 0px var(--color-dark-blue));  
+}
+
+.contact-item:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0px 4px 0px var(--color-dark-blue));  
+    transition: all 0.1s ease-in-out;
+}
