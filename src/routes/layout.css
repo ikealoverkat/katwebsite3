@@ -83,3 +83,21 @@
 .message-submit:active {
     transform: scale(0.9, 0.9);
 }
+
+.reveal-section {
+    animation: fade-in linear both;
+    animation-timeline: view();
+
+    animation-range: entry 10% contain 20%;
+}
+
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

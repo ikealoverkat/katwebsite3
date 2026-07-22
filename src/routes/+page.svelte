@@ -33,7 +33,7 @@
 	<!-- main -->
 	<div>
 		<!-- hero -->
-		<div class="-my-16 flex h-screen w-screen items-center justify-center gap-8">
+		<div class="-my-16 flex h-screen w-screen items-center justify-center gap-8 reveal-section">
 			<div class="relative h-[20rem] w-[22rem] outline-1 outline-dark-blue">
 				{#key currentImage}
 					<!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -52,7 +52,7 @@
 				<p class="-mb-2 text-[24px] font-bold text-red">DICTIONARY</p>
 				<div class="flex flex-row items-baseline gap-4">
 					<h1 class="text-[64px] text-dark-blue">kat wang</h1>
-					<p class="text-[20px] text-dark-blue/50 italic">/kˈat wˈaŋɡ/</p>
+					<p class="text-[20px] text-dark-blue/50 italic hover:scale-105 hover:underline duration-200">/kˈat wˈaŋɡ/</p>
 				</div>
 				<p class="text-[24px] leading-[28px] text-dark-blue">
 					1. someone who likes to make games, websites, and illustrations
@@ -82,9 +82,9 @@
 		</div>
 		<!-- what does she even do -->
 		<div class="m-20 flex flex-col gap-12">
-			<h2 class="m-4 text-[32px] font-bold text-dark-pink underline">WHAT DOES SHE EVEN DO??</h2>
+			<h2 class="m-4 text-[32px] font-bold text-dark-pink underline reveal-section">WHAT DOES SHE EVEN DO??</h2>
 			<!-- hc internship -->
-			<div class="ml-12 flex flex-row gap-14">
+			<div class="ml-12 flex flex-row gap-14 reveal-section">
 				<div
 					class="flex min-w-7/16 flex-row items-center justify-center gap-4 *:h-40 *:object-cover *:outline *:outline-dark-blue"
 				>
@@ -114,7 +114,7 @@
 				</div>
 			</div>
 			<!-- freelance -->
-			<div class="ml-12 flex flex-row-reverse gap-14">
+			<div class="ml-12 flex flex-row-reverse gap-14 reveal-section">
 				<div
 					class="mr-20 flex min-w-7/16 flex-row items-center justify-center gap-4 *:h-40 *:object-cover *:outline *:outline-dark-blue"
 				>
@@ -134,7 +134,7 @@
 				</div>
 			</div>
 			<!-- lead school events -->
-			<div class="ml-12 flex flex-row gap-14">
+			<div class="ml-12 flex flex-row gap-14 reveal-section">
 				<div
 					class="flex min-w-7/16 flex-row items-center justify-center gap-4 *:h-40 *:object-cover *:outline *:outline-dark-blue"
 				>
@@ -153,7 +153,7 @@
 				</div>
 			</div>
 			<!-- hang out w friends -->
-			<div class="ml-12 flex flex-row-reverse gap-14">
+			<div class="ml-12 flex flex-row-reverse gap-14 reveal-section">
 				<div
 					class="mr-20 flex min-w-7/16 flex-row items-center justify-center gap-4 *:h-40 *:object-cover *:outline *:outline-dark-blue"
 				>
@@ -175,7 +175,7 @@
 				</div>
 			</div>
 			<!-- code -->
-			<div class="ml-12 flex flex-row gap-14">
+			<div class="ml-12 flex flex-row gap-14 reveal-section">
 				<div
 					class="flex min-w-7/16 flex-row items-center justify-center gap-4 *:h-40 *:object-cover *:outline *:outline-dark-blue"
 				>
@@ -199,7 +199,7 @@
 				</div>
 			</div>
 			<!-- have hobbies -->
-			<div class="ml-12 flex flex-row-reverse gap-14">
+			<div class="ml-12 flex flex-row-reverse gap-14 reveal-section">
 				<div
 					class="mr-20 flex min-w-7/16 flex-row items-center justify-center gap-4 *:h-40 *:object-cover *:outline *:outline-dark-blue"
 				>
@@ -221,7 +221,7 @@
 				</div>
 			</div>
 			<!-- code -->
-			<div class="ml-12 flex flex-row gap-14">
+			<div class="ml-12 flex flex-row gap-14 reveal-section">
 				<div
 					class="flex min-w-7/16 flex-row items-center justify-center gap-4 *:h-40 *:object-cover *:outline *:outline-dark-blue"
 				>
@@ -242,7 +242,7 @@
 		</div>
 		<!-- send a message -->
 		<div
-			class="m-10 mt-36 w-11/18 items-center justify-items-center justify-self-center bg-light-teal p-18 text-center align-middle outline outline-blue drop-shadow-xl drop-shadow-black/25"
+			class="reveal-section m-10 mt-36 w-11/18 items-center justify-items-center justify-self-center bg-light-teal p-18 text-center align-middle outline outline-blue drop-shadow-xl drop-shadow-black/25"
 		>
 			<h1 class="text-[48px] text-dark-blue">send a message to kat</h1>
 			<p class="text-[24px] text-dark-blue">here are some preset options</p>
