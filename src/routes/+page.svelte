@@ -230,7 +230,7 @@
 					<img src="/imgs/landing/intern-3.PNG" alt="athena team dinner" />
 				</div>
 				<div class="mr-20 flex flex-col text-left">
-					<h1 class="text-[48px] leading-12 text-dark-blue">LISTEN TO BEABADOOBEE</h1>
+					<h1 class="text-[48px] leading-12 text-dark-blue font-bold">LISTEN TO BEABADOOBEE</h1>
 					<p class="mb-2 text-[24px] text-dark-blue italic">since june 2022</p>
 					<p class="text-[24px] text-dark-blue">
 						I LOVE BEABADOOBEE <br />
@@ -239,6 +239,19 @@
 					</p>
 				</div>
 			</div>
+		</div>
+		<!-- send a message -->
+		<div class="mt-36 outline outline-blue bg-light-teal drop-shadow-xl drop-shadow-black/25 p-18 m-10 w-11/18 justify-self-center justify-items-center items-center text-center align-middle">
+			<h1 class="text-[48px] text-dark-blue">send a message to kat</h1>
+			<p class="text-[24px] text-dark-blue">here are some preset options</p>
+			<div class="flex flex-row gap-6 m-8">
+				<button class="message-button bg-pink">you have too many words on your website</button>
+				<button class="message-button bg-light-yellow">fih ahh fih</button>
+				<button class="message-button bg-[#b9cbfe]">No <br/> I am working</button>
+			</div>
+			<p class="text-[24px] text-dark-blue">or you can</p>
+			<input placeholder="write a message..." type="text" class="outline message-custom"/>
+			<input type="submit" value="cool!" class="outline message-submit"/>
 		</div>
 	</div>
 </div>

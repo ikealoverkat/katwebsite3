@@ -3,6 +3,7 @@
 
 @theme {
     --color-light-blue: #e3f7fe;
+    --color-light-teal: #eefdfd;
     --color-light-yellow: #fdf19e;
     --color-pink: #fba3d1;
     --color-blue: #3660fb;
@@ -26,4 +27,59 @@
     transform: scale(1.1);
     filter: drop-shadow(0px 4px 0px var(--color-dark-blue));  
     transition: all 0.1s ease-in-out;
+}
+
+.message-button {
+    outline: 1px solid var(--color-dark-blue);
+    padding: 16px 32px;
+    max-width: 320px;
+    line-height: 28px;
+    color: var(--color-dark-blue);
+    font-size: 24px;
+    filter: drop-shadow(0px 2px 0px var(--color-dark-blue));
+    transition-duration: 0.2s;
+}
+
+.message-button:hover {
+    transition: all 0.2s ease-in-out;
+    transform: scale(1.05, 1.05);
+    outline: 2px solid var(--color-dark-blue);
+    filter: drop-shadow(0px 4px 0px var(--color-dark-blue));
+}
+
+.message-button:active {
+    transform: scale(0.8, 0.8);
+}
+
+.message-custom {
+    outline: 1px solid var(--color-dark-blue);
+    font-style: italic;
+    font-size: 24px;
+    color: var(--color-dark-blue);
+    margin: 8px;
+    background-color: white;
+    padding: 5px 16px;
+    width: 40vw;
+}
+
+.message-submit {
+    outline: 1px solid var(--color-dark-blue);
+    filter: drop-shadow(0px 2px 0px var(--color-dark-blue));
+    color: var(--color-dark-blue);
+    background-color: var(--color-pink);
+    font-size: 24px;
+    padding: 4px 32px;
+    margin: 8px;
+    transition-duration: 0.1s;
+}
+
+.message-submit:hover {
+    transition: all 0.1s ease-in-out;
+    padding: 2px 32px;
+    filter: drop-shadow(0px 4px 0px var(--color-dark-blue));
+    transform: scale(1.05, 1.05);
+}
+
+.message-submit:active {
+    transform: scale(0.9, 0.9);
 }
