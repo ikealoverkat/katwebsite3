@@ -3,10 +3,6 @@ title: "untitled blog post"
 date: "07/25/26"
 ---
 
-<script>
-    console.log("MDSVEX WORKS")
-</script>
-
-# hi
+## hi
 
 wow...  an insightful blog post.
