@@ -101,3 +101,8 @@
         transform: translateY(0);
     }
 }
+
+.prose blockquote p::before,
+.prose blockquote p::after {
+    content: "" !important;
+}
