@@ -2,7 +2,6 @@
 title: "how has hack club changed your life?"
 date: 07/25/26
 preview: "on the hack club slack, one of my friends, Stelle, sent a question in her personal channel: how has hack club changed your life? this is my answer to that question! (right now it's my incoherent message sent at 12:45 am but i will ..."
-thumbnail: "https://i.postimg.cc/VvDvH3Jx/image.png"
 --- 
 > on the hack club slack, one of my friends, [Stelle](https://stelle.codes), sent a question in her personal channel: how has hack club changed your life?
 >
