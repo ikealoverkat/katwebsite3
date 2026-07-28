@@ -2,7 +2,7 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 
-	const HERO_IMAGE_COUNT = 17;
+	const HERO_IMAGE_COUNT = 17;  
 	const imagePaths = Array.from({ length: HERO_IMAGE_COUNT }, (_, i) => `/imgs/hero/${i + 1}.jpg`);
 
 	let currentImgNumber = $state(0);
@@ -24,7 +24,7 @@
 		class="reveal-section flex min-h-screen w-full flex-col items-center justify-center gap-8 px-4 py-12 md:-my-24 md:flex-row md:py-0"
 	>
 		<div
-			class="relative h-[16rem] w-[18rem] shrink-0 outline-1 outline-dark-blue sm:h-[20rem] sm:w-[22rem]"
+			class="relative h-64 w-[18rem] shrink-0 outline-1 outline-dark-blue sm:h-80 sm:w-88"
 		>
 			{#key currentImage}
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
@@ -52,7 +52,7 @@
 				</p>
 			</div>
 			<p
-				class="text-[18px] leading-[24px] text-dark-blue sm:text-[20px] sm:leading-[28px] md:text-[24px]"
+				class="text-[18px] leading-6 text-dark-blue sm:text-[20px] sm:leading-7 md:text-[24px]"
 			>
 				1. someone who likes to make games, websites, and illustrations
 				<br />2. most intelligent
@@ -89,9 +89,9 @@
 		<!-- hc internship -->
 		<div class="reveal-section ml-0 flex flex-col gap-6 md:ml-12 lg:flex-row lg:gap-14">
 			<div
-				class="flex w-full flex-row flex-wrap items-center justify-center gap-4 *:h-24 *:w-[45%] *:object-cover *:outline *:outline-dark-blue sm:*:h-32 sm:*:w-[30%] lg:min-w-7/16 lg:flex-nowrap lg:*:h-40 lg:*:w-auto lg:*:min-w-0 lg:*:flex-1"
+				class="flex w-full flex-row flex-wrap items-center justify-center gap-4 *:h-24 *:w-[45%] *:object-cover *:outline *:outline-dark-blue sm:*:h-32 sm:*:w-[30%] lg:min-w-7/16 lg:flex-nowrap lg:*:h-50 lg:*:w-auto lg:*:min-w-0 lg:*:flex-1"
 			>
-				<img src="/imgs/landing/intern-1.PNG" alt="intern group photo" />
+				<img src="/imgs/landing/intern-1.PNG" alt="all the interns!" />
 				<img src="/imgs/landing/intern-2.jpg" alt="nice scenery" />
 				<img src="/imgs/landing/intern-3.PNG" alt="athena team dinner" />
 			</div>
@@ -120,7 +120,7 @@
 		<!-- freelance -->
 		<div class="reveal-section ml-0 flex flex-col gap-6 md:ml-12 lg:flex-row-reverse lg:gap-14">
 			<div
-				class="flex w-full flex-row flex-wrap items-center justify-center gap-4 *:h-24 *:w-[45%] *:object-cover *:outline *:outline-dark-blue sm:*:h-32 sm:*:w-[30%] lg:mr-20 lg:min-w-7/16 lg:flex-nowrap lg:*:h-70 lg:*:w-auto lg:*:min-w-0 lg:*:flex-1"
+				class="flex w-full flex-row flex-wrap items-center justify-center gap-4 *:h-40 *:w-[45%] *:object-cover *:outline *:outline-dark-blue sm:*:h-32 sm:*:w-[30%] lg:mr-20 lg:min-w-7/16 lg:flex-nowrap lg:*:h-70 lg:*:w-auto lg:*:min-w-0 lg:*:flex-1"
 			>
 				<img src="/imgs/landing/freelance-1.png" alt="landscape painting" />
 				<img src="/imgs/landing/freelance-2.png" alt="digital drawing of the golden gate bridge" />
@@ -144,11 +144,11 @@
 		<!-- lead school events -->
 		<div class="reveal-section ml-0 flex flex-col gap-6 md:ml-12 lg:flex-row lg:gap-14">
 			<div
-				class="flex w-full flex-row flex-wrap items-center justify-center gap-4 *:h-24 *:w-[45%] *:object-cover *:outline *:outline-dark-blue sm:*:h-32 sm:*:w-[30%] lg:min-w-7/16 lg:flex-nowrap lg:*:h-40 lg:*:w-auto lg:*:min-w-0 lg:*:flex-1"
+				class="flex w-full flex-row flex-wrap items-center justify-center gap-4 *:h-24 *:w-[45%] *:object-cover *:outline *:outline-dark-blue sm:*:h-32 sm:*:w-[30%] lg:min-w-7/16 lg:flex-nowrap lg:*:h-60 lg:*:w-auto lg:*:min-w-0 lg:*:flex-1"
 			>
-				<img src="/imgs/landing/intern-1.PNG" alt="intern group photo" />
-				<img src="/imgs/landing/intern-2.jpg" alt="nice scenery" />
-				<img src="/imgs/landing/intern-3.PNG" alt="athena team dinner" />
+				<img src="/imgs/landing/school-1.JPG" alt="me in front of grade sign" />
+				<img src="/imgs/landing/school-2.jpg" alt="me and lots of others in my grade" />
+				<img src="/imgs/landing/school-3.JPG" alt="me and 2 other student council volunteers being dumb" />
 			</div>
 			<div class="flex flex-col text-left lg:mr-20">
 				<h1
@@ -169,11 +169,11 @@
 		<!-- hang out w friends -->
 		<div class="reveal-section ml-0 flex flex-col gap-6 md:ml-12 lg:flex-row-reverse lg:gap-14">
 			<div
-				class="flex w-full flex-row flex-wrap items-center justify-center gap-4 *:h-24 *:w-[45%] *:object-cover *:outline *:outline-dark-blue sm:*:h-32 sm:*:w-[30%] lg:mr-20 lg:min-w-7/16 lg:flex-nowrap lg:*:h-40 lg:*:w-auto lg:*:min-w-0 lg:*:flex-1"
+				class="flex w-full flex-row flex-wrap items-center justify-center gap-4 *:h-40 *:w-[45%] *:object-cover *:outline *:outline-dark-blue sm:*:h-32 sm:*:w-[30%] lg:mr-20 lg:min-w-7/16 lg:flex-nowrap lg:*:h-60 lg:*:w-auto lg:*:min-w-0 lg:*:flex-1"
 			>
-				<img src="/imgs/landing/intern-1.PNG" alt="intern group photo" />
-				<img src="/imgs/landing/intern-2.jpg" alt="nice scenery" />
-				<img src="/imgs/landing/intern-3.PNG" alt="athena team dinner" />
+				<img src="/imgs/landing/friends-1.jpg" alt="me and 2 friends downtown" />
+				<img src="/imgs/landing/friends-2.jpg" alt="me and 2 friends in singapore" />
+				<img src="/imgs/landing/friends-3.jpg" alt="me and 3 intern friends at the beach" />
 			</div>
 			<div class="flex flex-col text-left">
 				<h1 class="text-[32px] leading-tight text-blue sm:text-[40px] lg:text-[48px] lg:leading-12">
@@ -195,11 +195,11 @@
 		<!-- code -->
 		<div class="reveal-section ml-0 flex flex-col gap-6 md:ml-12 lg:flex-row lg:gap-14">
 			<div
-				class="flex w-full flex-row flex-wrap items-center justify-center gap-4 *:h-24 *:w-[45%] *:object-cover *:outline *:outline-dark-blue sm:*:h-32 sm:*:w-[30%] lg:min-w-7/16 lg:flex-nowrap lg:*:h-40 lg:*:w-auto lg:*:min-w-0 lg:*:flex-1"
+				class="flex w-full flex-row flex-wrap items-center justify-center gap-4 *:h-30 *:w-[45%] *:object-cover *:outline *:outline-dark-blue sm:*:h-32 sm:*:w-[30%] lg:min-w-7/16 lg:flex-nowrap lg:*:h-45 lg:*:w-auto lg:*:min-w-0 lg:*:flex-1"
 			>
-				<img src="/imgs/landing/intern-1.PNG" alt="intern group photo" />
-				<img src="/imgs/landing/intern-2.jpg" alt="nice scenery" />
-				<img src="/imgs/landing/intern-3.PNG" alt="athena team dinner" />
+				<img src="/imgs/landing/code-1.jpg" alt="munchieguardian, the game i put a lot of effort into that still isnt done." />
+				<img src="https://cdn.hackclub.com/019fa20e-2f8a-77a1-9716-3ba491dedfa3/image.png" alt="cattatime project" />
+				<img src="/imgs/landing/code-3.png" alt="crunch time: alien gambling game" />
 			</div>
 			<div class="flex flex-col text-left lg:mr-20">
 				<h1 class="text-[32px] leading-tight text-red sm:text-[40px] lg:text-[48px] lg:leading-12">
@@ -221,11 +221,11 @@
 		<!-- have hobbies -->
 		<div class="reveal-section ml-0 flex flex-col gap-6 md:ml-12 lg:flex-row-reverse lg:gap-14">
 			<div
-				class="flex w-full flex-row flex-wrap items-center justify-center gap-4 *:h-24 *:w-[45%] *:object-cover *:outline *:outline-dark-blue sm:*:h-32 sm:*:w-[30%] lg:mr-20 lg:min-w-7/16 lg:flex-nowrap lg:*:h-40 lg:*:w-auto lg:*:min-w-0 lg:*:flex-1"
+				class="flex w-full flex-row flex-wrap items-center justify-center gap-4 *:h-40 *:w-[45%] *:object-cover *:outline *:outline-dark-blue sm:*:h-32 sm:*:w-[30%] lg:mr-20 lg:min-w-7/16 lg:flex-nowrap lg:*:h-60 lg:*:w-auto lg:*:min-w-0 lg:*:flex-1"
 			>
-				<img src="/imgs/landing/intern-1.PNG" alt="intern group photo" />
-				<img src="/imgs/landing/intern-2.jpg" alt="nice scenery" />
-				<img src="/imgs/landing/intern-3.PNG" alt="athena team dinner" />
+				<img src="/imgs/landing/hobby-1.jpg" alt="my island on tomodachi life" />
+				<img src="/imgs/landing/hobby-2.jpg" alt="nails i did!" />
+				<img src="/imgs/landing/hobby-3.gif" alt="me going up an escalator and pretending it's the stairmaster in nyc. LMAO"/>
 			</div>
 			<div class="flex flex-col text-left">
 				<h1
@@ -249,11 +249,11 @@
 		<!-- code -->
 		<div class="reveal-section ml-0 flex flex-col gap-6 md:ml-12 lg:flex-row lg:gap-14">
 			<div
-				class="flex w-full flex-row flex-wrap items-center justify-center gap-4 *:h-24 *:w-[45%] *:object-cover *:outline *:outline-dark-blue sm:*:h-32 sm:*:w-[30%] lg:min-w-7/16 lg:flex-nowrap lg:*:h-40 lg:*:w-auto lg:*:min-w-0 lg:*:flex-1"
+				class="flex w-full flex-row flex-wrap items-center justify-center gap-4 *:h-35 *:w-[45%] *:object-cover *:outline *:outline-dark-blue sm:*:h-32 sm:*:w-[30%] lg:min-w-7/16 lg:flex-nowrap lg:*:h-80 lg:*:w-auto lg:*:min-w-0 lg:*:flex-1"
 			>
-				<img src="/imgs/landing/intern-1.PNG" alt="intern group photo" />
-				<img src="/imgs/landing/intern-2.jpg" alt="nice scenery" />
-				<img src="/imgs/landing/intern-3.PNG" alt="athena team dinner" />
+				<img src="/imgs/landing/bea-1.jpg" alt="my beabadobee painting" />
+				<img src="/imgs/landing/bea-2.png" alt="my ticket to beabadoobees upcoming concert" />
+				<img src="/imgs/landing/bea-3.jpg" alt="my beabadoobee poster" />
 			</div>
 			<div class="flex flex-col text-left lg:mr-20">
 				<h1
@@ -266,7 +266,7 @@
 				</p>
 				<p class="text-[18px] break-words text-dark-blue sm:text-[20px] lg:text-[24px]">
 					I LOVE BEABADOOBEE <br />
-					I GOT CONCERT TICKETS FOR PYLON OCT 7<br />
+					I GOT CONCERT TICKETS. POWERLINES TOUR OCT 8. PYLON PYLON PYLON<br />
 					YEEEESSSSSSSSSSSSSSSSSSSSSSSSSSSSSS
 				</p>
 			</div>
