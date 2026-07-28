@@ -8,7 +8,7 @@
 		<h1 class="text-[128px] text-dark-pink">other things</h1>
 		<h3 class="text-[32px] leading-0 text-teal">loooooooooooooots of things</h3>
 	</div>
-	<div class="flex flex-row justify-center gap-16 self-center">
+	<div class="flex flex-row justify-center gap-24 self-center">
 		<div>
 			<h2 class="text-[48px] text-dark-blue underline">more about me</h2>
 			<p class="text-[20px] leading-4 text-dark-blue/75">chinese-canadian • she/her</p>
@@ -45,19 +45,23 @@
                 <Contact width="30px" height="30px" />
             </div>
 		</div>
-		<div class="grid grid-cols-2 grid-rows-2 outline">
-            <div class="more-box">
+		<div class="grid grid-cols-2 grid-rows-2 m-6">
+            <a href="/more/music"><div class="more-box bg-light-teal">
                 <h2 class="text-blue text-[48px]">MUSIC</h2>
-            </div>
-            <div class="more-box">
+                <img src="/imgs/more-music.png" alt="">
+            </div></a>
+            <a href="/more/digital-collectibles"><div class="more-box two bg-white">
                 <h2 class="text-teal text-[32px]">digital collectibles</h2>
-            </div>
-            <div class="more-box">
-                <h2 class="text-blue text-[32px]">777luckykat?</h2>
-            </div>                        
-            <div class="drawings">
+                <img src="/imgs/more-collect.png" alt="">
+            </div></a>
+            <a href="/more/gamble"><div class="more-box three bg-pink/13">
+                <h2 class="text-dark-pink text-[32px]">777luckykat?</h2>
+                <img src="/imgs/more-gamble.png" alt="">
+            </div></a>                     
+            <a href="/more/drawings"><div class="more-box four bg-light-yellow/45">
                 <h2 class="text-red text-[48px]">drawings</h2>
-            </div>                  
+                <img src="/imgs/more-draw.png" alt="">
+            </div></a>                  
         </div>
 	</div>
 </main>

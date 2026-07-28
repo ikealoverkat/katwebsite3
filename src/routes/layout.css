@@ -107,3 +107,35 @@
     content: "" !important;
 }
 
+.more-box {
+    outline: solid 1px var(--color-blue);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 24px;
+    margin: 12px;
+    box-shadow: 0px 2px 12px #00000025;
+    max-height: 270px;
+    transition: all;
+    transition-duration: 200ms;
+}
+
+.more-box:hover {
+    transform: scale(1.05, 1.05);
+    padding-bottom: 36px;
+    box-shadow: 0px 4px 12px #00000025;
+}
+
+.two {
+    outline: solid 1px var(--color-teal);
+}
+
+.three {
+    outline: solid 1px var(--color-dark-pink)
+}
+
+.four {
+    outline: solid 1px var(--color-red)
+}
