@@ -33,7 +33,7 @@
 					alt=""
 					src={post.thumbnail}
 				/>
-				<article>
+				<article class="w-full">
 					<div
 						class="mb-4 flex flex-col gap-2
 						sm:flex-row sm:items-center sm:justify-between"
