@@ -1,8 +1,9 @@
 <script lang="ts">
+	import Contact from '$lib/Contact.svelte';
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 
-	const HERO_IMAGE_COUNT = 17;  
+	const HERO_IMAGE_COUNT = 17;
 	const imagePaths = Array.from({ length: HERO_IMAGE_COUNT }, (_, i) => `/imgs/hero/${i + 1}.jpg`);
 
 	let currentImgNumber = $state(0);
@@ -23,9 +24,7 @@
 	<div
 		class="reveal-section flex min-h-screen w-full flex-col items-center justify-center gap-8 px-4 py-12 md:-my-24 md:flex-row md:py-0"
 	>
-		<div
-			class="relative h-64 w-[18rem] shrink-0 outline-1 outline-dark-blue sm:h-80 sm:w-88"
-		>
+		<div class="relative h-64 w-[18rem] shrink-0 outline-1 outline-dark-blue sm:h-80 sm:w-88">
 			{#key currentImage}
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
 				<!-- svelte-ignore a11y_no_noninteractive_element_interactions -->
@@ -51,9 +50,7 @@
 					/kˈat wˈaŋɡ/
 				</p>
 			</div>
-			<p
-				class="text-[18px] leading-6 text-dark-blue sm:text-[20px] sm:leading-7 md:text-[24px]"
-			>
+			<p class="text-[18px] leading-6 text-dark-blue sm:text-[20px] sm:leading-7 md:text-[24px]">
 				1. someone who likes to make games, websites, and illustrations
 				<br />2. most intelligent
 				<a
@@ -62,21 +59,7 @@
 					target="_blank">hack clubber</a
 				>
 			</p>
-			<!-- make this a component later -->
-			<div class="my-4 flex flex-row gap-3">
-				<a href="https://instagram.com/777luckykat" class="contact-item"
-					><img src="/imgs/contact-ig.png" alt="link to my instagram" /></a
-				>
-				<a href="mailto:kat@hackclub.com" class="contact-item"
-					><img src="/imgs/contact-mail.png" alt="email me!" /></a
-				>
-				<a href="https://github.com/ikealoverkat" class="contact-item"
-					><img src="/imgs/contact-gh.png" alt="link to my github" /></a
-				>
-				<a href="https://hackclub.enterprise.slack.com/team/U08H34LLQQJ" class="contact-item"
-					><img src="/imgs/contact-slack.png" alt="send a slack dm!" /></a
-				>
-			</div>
+			<div class="m-2"><Contact width="36px" height="36px" /></div>
 		</div>
 	</div>
 	<!-- what does she even do -->
@@ -137,7 +120,10 @@
 					I like to draw and paint. sometimes i sell my drawings and paintings to people and
 					companies! heres some of my favourite drawings → <br />
 					sometimes, hack club also hires me as a contractor. the people there like my drawings. cool!
-					<br /> <a class="text-dark-pink italic underline hover:decoration-wavy">see more</a>
+					<br />
+					<a class="text-dark-pink italic underline hover:decoration-wavy" href="placeholder"
+						>see more</a
+					>
 				</p>
 			</div>
 		</div>
@@ -148,7 +134,10 @@
 			>
 				<img src="/imgs/landing/school-1.JPG" alt="me in front of grade sign" />
 				<img src="/imgs/landing/school-2.jpg" alt="me and lots of others in my grade" />
-				<img src="/imgs/landing/school-3.JPG" alt="me and 2 other student council volunteers being dumb" />
+				<img
+					src="/imgs/landing/school-3.JPG"
+					alt="me and 2 other student council volunteers being dumb"
+				/>
 			</div>
 			<div class="flex flex-col text-left lg:mr-20">
 				<h1
@@ -197,8 +186,14 @@
 			<div
 				class="flex w-full flex-row flex-wrap items-center justify-center gap-4 *:h-30 *:w-[45%] *:object-cover *:outline *:outline-dark-blue sm:*:h-32 sm:*:w-[30%] lg:min-w-7/16 lg:flex-nowrap lg:*:h-45 lg:*:w-auto lg:*:min-w-0 lg:*:flex-1"
 			>
-				<img src="/imgs/landing/code-1.jpg" alt="munchieguardian, the game i put a lot of effort into that still isnt done." />
-				<img src="https://cdn.hackclub.com/019fa20e-2f8a-77a1-9716-3ba491dedfa3/image.png" alt="cattatime project" />
+				<img
+					src="/imgs/landing/code-1.jpg"
+					alt="munchieguardian, the game i put a lot of effort into that still isnt done."
+				/>
+				<img
+					src="https://cdn.hackclub.com/019fa20e-2f8a-77a1-9716-3ba491dedfa3/image.png"
+					alt="cattatime project"
+				/>
 				<img src="/imgs/landing/code-3.png" alt="crunch time: alien gambling game" />
 			</div>
 			<div class="flex flex-col text-left lg:mr-20">
@@ -225,7 +220,10 @@
 			>
 				<img src="/imgs/landing/hobby-1.jpg" alt="my island on tomodachi life" />
 				<img src="/imgs/landing/hobby-2.jpg" alt="nails i did!" />
-				<img src="/imgs/landing/hobby-3.gif" alt="me going up an escalator and pretending it's the stairmaster in nyc. LMAO"/>
+				<img
+					src="/imgs/landing/hobby-3.gif"
+					alt="me going up an escalator and pretending it's the stairmaster in nyc. LMAO"
+				/>
 			</div>
 			<div class="flex flex-col text-left">
 				<h1
@@ -264,7 +262,7 @@
 				<p class="mb-2 text-[18px] text-dark-blue italic sm:text-[20px] lg:text-[24px]">
 					since june 2022
 				</p>
-				<p class="text-[18px] break-words text-dark-blue sm:text-[20px] lg:text-[24px]">
+				<p class="text-[18px] wrap-break-word text-dark-blue sm:text-[20px] lg:text-[24px]">
 					I LOVE BEABADOOBEE <br />
 					I GOT CONCERT TICKETS. POWERLINES TOUR OCT 8. PYLON PYLON PYLON<br />
 					YEEEESSSSSSSSSSSSSSSSSSSSSSSSSSSSSS

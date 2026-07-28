@@ -40,13 +40,13 @@
 					>
 						<h2
 							class="text-2xl leading-7 text-pretty text-blue hover:underline
-							sm:text-[32px] sm:leading-[37px]"
+							sm:text-[32px] sm:leading-9.25"
 						>
 							{post.title}
 						</h2>
 						<p class="text-xl text-red sm:text-[24px]">{post.date}</p>
 					</div>
-					<p class="text-lg leading-6 text-pretty text-dark-blue sm:text-[20px] sm:leading-[23px]">
+					<p class="text-lg leading-6 text-pretty text-dark-blue sm:text-[20px] sm:leading-5.75">
 						{post.preview}
 					</p>
 				</article>
