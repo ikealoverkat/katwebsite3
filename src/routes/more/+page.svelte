@@ -1,39 +1,51 @@
 <script lang="ts">
-	import Contact from "$lib/Contact.svelte";
+	import Contact from '$lib/Contact.svelte';
 
+	const hover = new Audio('/sounds/hover.mp3');
+	const click = new Audio('/sounds/click1.mp3');
+
+	function playHover() {
+		hover.currentTime = 0;
+		hover.play();
+	}
+
+	function playClick() {
+		click.currentTime = 0;
+		click.play();
+	}
 </script>
 
 <main class="flex flex-col gap-2 bg-linear-to-b from-cream to-white">
 	<div class="m-6 items-center justify-center self-center text-center">
-		<h1 class="text-6xl sm:text-8xl lg:text-[128px] text-dark-pink">other things</h1>
-		<h3 class="text-2xl lg:text-[32px] leading-6 text-teal">loooooooooooooots of things</h3>
+		<h1 class="text-6xl text-dark-pink sm:text-8xl lg:text-[128px]">other things</h1>
+		<h3 class="text-2xl leading-6 text-teal lg:text-[32px]">loooooooooooooots of things</h3>
 	</div>
 
-	<div class="flex flex-col lg:flex-row justify-center gap-12 lg:gap-24 self-center px-4">
+	<div class="flex flex-col justify-center gap-12 self-center px-4 lg:flex-row lg:gap-24">
 		<div class="text-center lg:text-left">
-			<h2 class="text-[36px] lg:text-[48px] text-dark-blue underline">more about me</h2>
-			<p class="text-[18px] lg:text-[20px] leading-4 text-dark-blue/75">chinese-canadian • she/her</p>
+			<h2 class="text-[36px] text-dark-blue underline lg:text-[48px]">more about me</h2>
+			<p class="text-[18px] leading-4 text-dark-blue/75 lg:text-[20px]">
+				chinese-canadian • she/her
+			</p>
 
-			<p class="my-4 text-[20px] lg:text-[24px] text-dark-blue">
+			<p class="my-4 text-[20px] text-dark-blue lg:text-[24px]">
 				i am currently in <b>ottawa.</b> if you are too, let's hang out! [<a
 					href="placeholder"
-					class="text-blue underline hover:decoration-wavy">book here</a
+					class="text-blue underline hover:decoration-wavy"
+					onclick={playClick}
+					onmouseenter={playHover}>book here</a
 				>]
 			</p>
 
 			<div class="my-4 text-[20px] lg:text-[24px]">
 				<p class="text-dark-pink">likes</p>
-				<ul class="text-dark-blue m-2">
+				<ul class="m-2 text-dark-blue">
 					<li>• cats</li>
 					<li>• water & marine life</li>
 					<li>• making friends</li>
-					<li class="inline-flex gap-2 items-center">
+					<li class="inline-flex items-center gap-2">
 						• asian food
-						<img
-							src="https://i.postimg.cc/xCrkZXQk/image.png"
-							alt="drool emoji"
-							class="h-7 w-7"
-						/>
+						<img src="https://i.postimg.cc/xCrkZXQk/image.png" alt="drool emoji" class="h-7 w-7" />
 					</li>
 				</ul>
 
@@ -45,32 +57,54 @@
 				</ul>
 			</div>
 
-			<div class="inline-flex flex-wrap gap-6 items-center text-[20px] lg:text-[24px] text-dark-blue underline">
+			<div
+				class="inline-flex flex-wrap items-center gap-6 text-[20px] text-dark-blue underline lg:text-[24px]"
+			>
 				reach out online here:
 				<Contact width="30px" height="30px" />
 			</div>
 		</div>
 
-		<div class="grid grid-cols-1 sm:grid-cols-2 gap-6 m-6">
-			<a href="/more/music"><div class="more-box bg-light-teal">
-				<h2 class="text-blue text-[48px]">MUSIC</h2>
-				<img src="/imgs/more-music.png" alt="">
-			</div></a>
+		<div class="m-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
+			<a href="/more/music"
+				>
+				<!-- svelte-ignore a11y_click_events_have_key_events -->
+				<!-- svelte-ignore a11y_no_static_element_interactions -->
+				<div class="more-box bg-light-teal" onclick={playClick} onmouseenter={playHover}>
+					<h2 class="text-[48px] text-blue">MUSIC</h2>
+					<img src="/imgs/more-music.png" alt="" />
+				</div></a
+			>
 
-			<a href="/more/digital-collectibles"><div class="more-box bg-white">
-				<h2 class="text-teal text-[32px]">digital collectibles</h2>
-				<img src="/imgs/more-collect.png" alt="">
-			</div></a>
+			<a href="/more/digital-collectibles"
+				>
+				<!-- svelte-ignore a11y_click_events_have_key_events -->
+				<!-- svelte-ignore a11y_no_static_element_interactions -->				
+				<div class="more-box bg-white" onclick={playClick} onmouseenter={playHover}>
+					<h2 class="text-[32px] text-teal">digital collectibles</h2>
+					<img src="/imgs/more-collect.png" alt="" />
+				</div></a
+			>
 
-			<a href="/more/gamble"><div class="more-box bg-pink/13">
-				<h2 class="text-dark-pink text-[32px]">777luckykat?</h2>
-				<img src="/imgs/more-gamble.png" alt="">
-			</div></a>
+			<a href="/more/gamble"
+				>
+				<!-- svelte-ignore a11y_click_events_have_key_events -->
+				<!-- svelte-ignore a11y_no_static_element_interactions -->				
+				<div class="more-box bg-pink/13" onclick={playClick} onmouseenter={playHover}>
+					<h2 class="text-[32px] text-dark-pink">777luckykat?</h2>
+					<img src="/imgs/more-gamble.png" alt="" />
+				</div></a
+			>
 
-			<a href="/more/drawings"><div class="more-box bg-light-yellow/45">
-				<h2 class="text-red text-[48px]">drawings</h2>
-				<img src="/imgs/more-draw.png" alt="">
-			</div></a>
+			<a href="/more/drawings"
+				>
+				<!-- svelte-ignore a11y_click_events_have_key_events -->
+				<!-- svelte-ignore a11y_no_static_element_interactions -->				
+				<div class="more-box bg-light-yellow/45" onclick={playClick} onmouseenter={playHover}>
+					<h2 class="text-[48px] text-red">drawings</h2>
+					<img src="/imgs/more-draw.png" alt="" />
+				</div></a
+			>
 		</div>
 	</div>
 </main>

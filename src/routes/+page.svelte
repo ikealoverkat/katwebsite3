@@ -40,6 +40,19 @@
 			console.error(err);
 		}
 	}
+
+	const hover = new Audio('/sounds/hover.wav');
+	const click = new Audio('/sounds/click1.mp3');
+
+	function playHover() {
+		hover.currentTime = 0;
+		hover.play();
+	}
+
+	function playClick() {
+		click.currentTime = 0;
+		click.play();
+	}
 </script>
 
 <div class="bg-linear-to-b from-cream to-white">
@@ -306,7 +319,9 @@
 					preset = 'you have too many words on your website';
 					message = '';
 					sendMessage();
-				}}>you have too many words on your website</button
+					playClick();
+				}}
+				onmouseenter={playHover}>you have too many words on your website</button
 			>
 			<button
 				class="message-button bg-light-yellow"
@@ -314,7 +329,9 @@
 					preset = 'fih ahh fih';
 					message = '';
 					sendMessage();
-				}}>fih ahh fih</button
+					playClick();
+				}}
+				onmouseenter={playHover}>fih ahh fih</button
 			>
 			<button
 				class="message-button bg-[#b9cbfe]"
@@ -322,7 +339,9 @@
 					preset = 'No I am Working';
 					message = '';
 					sendMessage();
-				}}>No <br /> I am working</button
+					playClick();
+				}}
+				onmouseenter={playHover}>No <br /> I am working</button
 			>
 		</div>
 		<p class="text-[18px] text-dark-blue sm:text-[24px]">or you can</p>
@@ -332,6 +351,13 @@
 			type="text"
 			class="message-custom w-full outline sm:w-auto"
 		/>
-		<button class="message-submit outline" onclick={sendMessage}>cool!</button>
+		<button
+			class="message-submit outline"
+			onclick={() => {
+				sendMessage();
+				playClick();
+			}}
+			onmouseenter={playHover}>cool!</button
+		>
 	</div>
 </div>

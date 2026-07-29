@@ -1,5 +1,18 @@
 <script lang="ts">
 	let { data } = $props();
+
+	const hover = new Audio('/sounds/hover.mp3');
+	const click = new Audio('/sounds/click1.mp3');
+
+	function playHover() {
+		hover.currentTime = 0;
+		hover.play();
+	}
+
+	function playClick() {
+		click.currentTime = 0;
+		click.play();
+	}
 </script>
 
 <main class="flex flex-col bg-linear-to-b from-cream to-white">
@@ -26,6 +39,8 @@
 				href={`/blog/${post.slug}`}
 				class="m-4 mx-6 flex w-auto flex-col gap-6 border-b border-b-blue bg-white/10 p-4 pb-10 duration-150 hover:p-6
 				sm:mx-36 sm:w-3/4 sm:flex-row sm:gap-12"
+				onclick={playClick}
+				onmouseenter={playHover}
 			>
 				<img
 					class="h-48 w-full object-cover outline-1 outline-dark-blue
