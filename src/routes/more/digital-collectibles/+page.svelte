@@ -1,9 +1,33 @@
 <script lang="ts">
     let funnypictures = Object.keys(import.meta.glob('$lib/assets/funny/*'));
+	import { onMount } from 'svelte';
+
+	let hover: HTMLAudioElement;
+	let click: HTMLAudioElement;
+
+	onMount(() => {
+		hover = new Audio('/sounds/hover2.wav');
+		click = new Audio('/sounds/click1.mp3');
+	});
+
+	function playHover() {
+		if (!hover) return;
+		hover.currentTime = 0;
+		hover.play();
+	}
+
+	function playClick() {
+		if (!click) return;
+		click.currentTime = 0;
+		click.play();
+	}    
 </script>
 
 <main class="flex flex-col items-center justify-center gap-2 bg-linear-to-b from-pink/15 to-cream p-12 pb-18">
-	<h2 class="text-5xl text-dark-blue">digital collectibles</h2>
+	<a onclick={playClick} onmouseenter={playHover} class="self-center lg:self-start mx-12 text-xl text-teal italic underline hover:decoration-wavy" href="/more"
+		>← back</a
+	>	
+    <h2 class="text-5xl text-dark-blue">digital collectibles</h2>
 	<p class="text-xl text-blue">cool...</p>
 	<div class="items-center flex flex-col gap-4 m-8">
 		<h1 class="text-3xl wrap-break-word underline text-dark-pink">
