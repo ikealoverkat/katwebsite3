@@ -36,10 +36,11 @@
 
 			<p class="my-4 text-[20px] text-dark-blue lg:text-[24px]">
 				i am currently in <b>ottawa.</b> if you are too, let's hang out! [<a
-					href="placeholder"
+					href="https://discordapp.com/users/902566588815925368"
+					target="_blank"
 					class="text-blue underline hover:decoration-wavy"
-					onclick={playClick}
-					onmouseenter={playHover}>book here</a
+					onclick={playClick} 
+					onmouseenter={playHover}>discord</a
 				>]
 			</p>
 
@@ -66,7 +67,7 @@
 			<div
 				class="inline-flex flex-wrap items-center gap-6 text-[20px] text-dark-blue underline lg:text-[24px]"
 			>
-				reach out online here:
+				reach out here:
 				<Contact width="30px" height="30px" />
 			</div>
 		</div>

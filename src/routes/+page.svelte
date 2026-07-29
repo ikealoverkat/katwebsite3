@@ -3,8 +3,7 @@
 	import { onMount } from 'svelte';
 	import { fade } from 'svelte/transition';
 
-	const HERO_IMAGE_COUNT = 17;
-	const imagePaths = Array.from({ length: HERO_IMAGE_COUNT }, (_, i) => `/imgs/hero/${i + 1}.jpg`);
+	const imagePaths = Object.keys(import.meta.glob('$lib/assets/hero/*'))
 
 	let currentImgNumber = $state(0);
 
@@ -130,6 +129,7 @@
 				</h1>
 				<p class="mb-2 text-[18px] text-dark-blue italic sm:text-[20px] lg:text-[24px]">
 					june-july 2026 • <a
+						onclick={playClick} onmouseenter={playHover}
 						href="placeholder"
 						class="text-dark-pink underline hover:decoration-wavy">see the blog post here</a
 					>
@@ -137,10 +137,10 @@
 				<p class="text-[18px] text-dark-blue sm:text-[20px] lg:text-[24px]">
 					For a month, I worked a 9-5 at <a
 						href="hackclub.com"
-						class="text-blue underline hover:decoration-wavy">hack club</a
+						class="text-blue underline hover:decoration-wavy" onclick={playClick} onmouseenter={playHover}>hack club</a
 					>, a tech nonprofit with an active community of 100k+ teens that gives teens free prizes
 					for building technnical projects. I worked specifically for
-					<a href="athena.hackclub.com" class="text-blue underline hover:decoration-wavy">athena</a
+					<a onclick={playClick} onmouseenter={playHover} href="athena.hackclub.com" class="text-blue underline hover:decoration-wavy">athena</a
 					>, a part of the nonprofit that focuses on getting more girls into tech. made brands,
 					websites, and illustrations. Also lived in a dorm with 24 other interns. cool!
 				</p>
@@ -167,8 +167,8 @@
 					companies! heres some of my favourite drawings → <br />
 					sometimes, hack club also hires me as a contractor. the people there like my drawings. cool!
 					<br />
-					<a class="text-dark-pink italic underline hover:decoration-wavy" href="placeholder"
-						>see more</a
+					<a class="text-dark-pink italic underline hover:decoration-wavy" href="/more/drawings"
+						onclick={playClick} onmouseenter={playHover}>see more</a
 					>
 				</p>
 			</div>
@@ -222,7 +222,8 @@
 					which means more opportunities to make friends. i have lots of blog posts about hack club
 					events and they feature my friends too :) <a
 						href="/blog"
-						class="text-blue italic underline hover:decoration-wavy">see here</a
+						class="text-blue italic underline hover:decoration-wavy"
+						onclick={playClick} onmouseenter={playHover}>see here</a
 					> <br /> i also love my hometown friends yall r cool #dayones
 				</p>
 			</div>
@@ -248,6 +249,7 @@
 				</h1>
 				<p class="mb-2 text-[18px] text-dark-blue italic sm:text-[20px] lg:text-[24px]">
 					since march 2025 • <a
+						onclick={playClick} onmouseenter={playHover}
 						href="https://github.com/ikealoverkat"
 						class="text-blue underline hover:decoration-wavy">github</a
 					>
