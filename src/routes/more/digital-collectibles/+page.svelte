@@ -13,7 +13,7 @@
 	</div>
 
 	<h1 class="text-3xl text-teal underline">blinkies</h1>
-	<div class="flex gap-4 flex-wrap m-2">
+	<div class="flex gap-4 items-center justify-center self-center flex-wrap m-2">
         <img src="/imgs/collect/blinkie1.gif" alt="women in stem">
         <img src="/imgs/collect/blinkie2.gif" alt="stressed...">
         <img src="/imgs/collect/blinkie3.gif" alt="energy drink addict">
@@ -22,7 +22,7 @@
         <img src="/imgs/collect/blinkie-nyancat.gif" alt="nyan cat saying 'hi guys'">        
     </div>
 	<h1 class="text-3xl text-red underline">stamps</h1>
-    <div class="flex gap-4 flex-wrap m-2">
+    <div class="flex gap-4 flex-wrap items-center justify-center self-center m-2">
         <img src="/imgs/collect/stamp1.webp" alt="more fih ahh fih">
         <img src="/imgs/collect/stamp2.png" alt="hachiware saying ts pmo">
         <img src="/imgs/collect/stamp3.png" alt="happy kaomoji">
@@ -34,7 +34,7 @@
         <img src="/imgs/collect/stamp9.png" alt="you're doing great">                        
     </div>
     <h1 class="text-3xl text-blue underline">...interesting... things my friends wanted me to put on this website</h1>
-    <div class="flex gap-2 m-2">
+    <div class="flex flex-wrap gap-2 m-2 items-center justify-center self-center">
         {#each funnypictures as picture}
             <img src={picture} alt="" class="max-h-30"/>
         {/each}
