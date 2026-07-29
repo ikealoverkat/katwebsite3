@@ -2,140 +2,168 @@
 @plugin '@tailwindcss/typography';
 
 @theme {
-    --color-light-blue: #e3f7fe;
-    --color-light-teal: #eefdfd;
-    --color-light-yellow: #fdf19e;
-    --color-pink: #fba3d1;
-    --color-blue: #3660fb;
-    --color-teal: #1ac4d6;
-    --color-red: #ec1c24;
-    --color-dark-blue: #1c3d78;
-    --color-cream: #FFFCFA;
-    --color-dark-pink: #e63888;
+	--color-light-blue: #e3f7fe;
+	--color-light-teal: #eefdfd;
+	--color-light-yellow: #fdf19e;
+	--color-pink: #fba3d1;
+	--color-blue: #3660fb;
+	--color-teal: #1ac4d6;
+	--color-red: #ec1c24;
+	--color-dark-blue: #1c3d78;
+	--color-cream: #fffcfa;
+	--color-dark-pink: #e63888;
 }
 
 * {
-    font-family:'Times New Roman', Times, serif;
+	font-family: 'Times New Roman', Times, serif;
 }
 
 .contact-item {
-    transition-duration: 0.1s;
-    filter: drop-shadow(0px 2px 0px var(--color-dark-blue));  
+	transition-duration: 0.1s;
+	filter: drop-shadow(0px 2px 0px var(--color-dark-blue));
 }
 
 .contact-item:hover {
-    transform: scale(1.1);
-    filter: drop-shadow(0px 4px 0px var(--color-dark-blue));  
-    transition: all 0.1s ease-in-out;
+	transform: scale(1.1);
+	filter: drop-shadow(0px 4px 0px var(--color-dark-blue));
+	transition: all 0.1s ease-in-out;
 }
 
 .message-button {
-    outline: 1px solid var(--color-dark-blue);
-    padding: 16px 32px;
-    max-width: 320px;
-    line-height: 28px;
-    color: var(--color-dark-blue);
-    font-size: 24px;
-    filter: drop-shadow(0px 2px 0px var(--color-dark-blue));
-    transition-duration: 0.2s;
+	outline: 1px solid var(--color-dark-blue);
+	padding: 16px 32px;
+	max-width: 320px;
+	line-height: 28px;
+	color: var(--color-dark-blue);
+	font-size: 24px;
+	filter: drop-shadow(0px 2px 0px var(--color-dark-blue));
+	transition-duration: 0.2s;
 }
 
 .message-button:hover {
-    transition: all 0.2s ease-in-out;
-    transform: scale(1.05, 1.05);
-    outline: 2px solid var(--color-dark-blue);
-    filter: drop-shadow(0px 4px 0px var(--color-dark-blue));
+	transition: all 0.2s ease-in-out;
+	transform: scale(1.05, 1.05);
+	outline: 2px solid var(--color-dark-blue);
+	filter: drop-shadow(0px 4px 0px var(--color-dark-blue));
 }
 
 .message-button:active {
-    transform: scale(0.8, 0.8);
+	transform: scale(0.8, 0.8);
 }
 
 .message-custom {
-    outline: 1px solid var(--color-dark-blue);
-    font-style: italic;
-    font-size: 24px;
-    color: var(--color-dark-blue);
-    margin: 8px;
-    background-color: white;
-    padding: 5px 16px;
-    width: 40vw;
+	outline: 1px solid var(--color-dark-blue);
+	font-style: italic;
+	font-size: 24px;
+	color: var(--color-dark-blue);
+	margin: 8px;
+	background-color: white;
+	padding: 5px 16px;
+	width: 40vw;
 }
 
 .message-submit {
-    outline: 1px solid var(--color-dark-blue);
-    filter: drop-shadow(0px 2px 0px var(--color-dark-blue));
-    color: var(--color-dark-blue);
-    background-color: var(--color-pink);
-    font-size: 24px;
-    padding: 4px 32px;
-    margin: 8px;
-    transition-duration: 0.1s;
+	outline: 1px solid var(--color-dark-blue);
+	filter: drop-shadow(0px 2px 0px var(--color-dark-blue));
+	color: var(--color-dark-blue);
+	background-color: var(--color-pink);
+	font-size: 24px;
+	padding: 4px 32px;
+	margin: 8px;
+	transition-duration: 0.1s;
 }
 
 .message-submit:hover {
-    transition: all 0.1s ease-in-out;
-    padding: 2px 32px;
-    filter: drop-shadow(0px 4px 0px var(--color-dark-blue));
-    transform: scale(1.05, 1.05);
+	transition: all 0.1s ease-in-out;
+	padding: 2px 32px;
+	filter: drop-shadow(0px 4px 0px var(--color-dark-blue));
+	transform: scale(1.05, 1.05);
 }
 
 .message-submit:active {
-    transform: scale(0.9, 0.9);
+	transform: scale(0.9, 0.9);
 }
 
 .reveal-section {
-    animation: fade-in linear both;
-    animation-timeline: view();
+	animation: fade-in linear both;
+	animation-timeline: view();
 
-    animation-range: entry 10% contain 20%;
+	animation-range: entry 10% contain 20%;
 }
 
 @keyframes fade-in {
-    from {
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+	from {
+		opacity: 0;
+		transform: translateY(-50px);
+	}
+	to {
+		opacity: 1;
+		transform: translateY(0);
+	}
 }
 
 .prose blockquote p::before,
 .prose blockquote p::after {
-    content: "" !important;
+	content: '' !important;
 }
 
 .more-box {
-    outline: solid 1px var(--color-blue);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 24px;
-    margin: 12px;
-    box-shadow: 0px 2px 12px #00000025;
-    max-height: 270px;
-    transition: all;
-    transition-duration: 200ms;
+	outline: solid 1px var(--color-blue);
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+	padding: 24px;
+	margin: 12px;
+	box-shadow: 0px 2px 12px #00000025;
+	max-height: 270px;
+	transition: all;
+	transition-duration: 200ms;
 }
 
 .more-box:hover {
-    transform: scale(1.05, 1.05);
-    padding-bottom: 36px;
-    box-shadow: 0px 4px 12px #00000025;
+	transform: scale(1.05, 1.05);
+	padding-bottom: 36px;
+	box-shadow: 0px 4px 12px #00000025;
 }
 
 .two {
-    outline: solid 1px var(--color-teal);
+	outline: solid 1px var(--color-teal);
 }
 
 .three {
-    outline: solid 1px var(--color-dark-pink)
+	outline: solid 1px var(--color-dark-pink);
 }
 
 .four {
-    outline: solid 1px var(--color-red)
+	outline: solid 1px var(--color-red);
+}
+
+@keyframes ball {
+	0%, 100% {
+		transform: translate(0, 0) rotate(0deg);
+	}
+	25% {
+		transform: translate(-15px, -15px) rotate(-10deg);
+	}
+	50% {
+		transform: translate(15px, 15px) rotate(10deg);
+	}
+	75% {
+		transform: translate(-15px, 10px) rotate(-5deg);
+	}
+}
+
+.ball {
+    animation-play-state: paused;
+    transition-duration: 500ms;
+}
+
+.ball:hover {
+    transform: scale(1.1, 1.1);
+}
+
+.ball:active {
+    animation: ball 0.1s ease-out 0s infinite forwards running;  
 }

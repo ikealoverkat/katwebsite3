@@ -1,7 +1,7 @@
 	<div class="items-center justify-center text-center p-10 sm:p-20 bg-white">
-		<h2 class="text-[18px] sm:text-[24px] leading-[24px] sm:leading-[28px] text-dark-blue">
+		<h2 class="text-[18px] sm:text-[24px] leading-6esm:leading-7-dark-blue">
 			© kat wang 2026
-			<br /> made with &lt;3 and <img src="/imgs/dietcoke.png" alt="diet coke" class="w-[18px] inline" />
+			<br /> made with &lt;3 and <img src="/imgs/dietcoke.png" alt="diet coke" class="w-4.5 inline" />
 		</h2>
 		<h2 class="text-[14px] sm:text-[18px] text-dark-blue mt-4">
 			vaguely inspired by <a

@@ -1,5 +1,45 @@
 <script lang="ts">
-	let gamble: string = 'click me';
+	let gamble: string = $state('click & hold');
+	let gambleNumber: number = 0;
+
+	const ballOptions = [
+		'it is certain',
+		'it is crunch (like the alien from my dumb game)',
+		'perchance',
+		'yes definitely',
+		'yes but only if you stream beabadoobee',
+		'as i see it, yes',
+		'most likely',
+		'outlook good',
+		'yes',
+		'signs point to yes',
+		'a person who thinks all the time has nothing to think about except thoughts',
+		'relaxing question mark?',
+		'reply hazy, try again later',
+		"No I'm Working",
+		'du bist gut genug',
+		'about as likely as justin bieber turning chinese (take what you will)',
+		'concentrate and ask again',
+		'ascension.hackclub.com',
+		"don't count on it",
+		'great question!',
+		'no (source: trust me bro)',
+		'very doubtful',
+		'NO',
+		'outlook not so good',
+		'贾斯汀比伯'
+	];
+
+	function getRandomInt(min: number, max: number) {
+		min = Math.ceil(min);
+		max = Math.floor(max);
+		return Math.floor(Math.random() * (max - min + 1) + min);
+	}
+
+	function gambleNow() {
+		gambleNumber = getRandomInt(0, ballOptions.length - 1);
+		gamble = ballOptions[gambleNumber];
+	}
 </script>
 
 <main class="flex flex-col bg-linear-to-b from-cream to-white">
@@ -9,15 +49,16 @@
 	<div class="m-8">
 		<h1 class="text-center text-6xl text-blue">magic 7 ball</h1>
 		<p class="text-center text-lg text-dark-blue/75 italic">
-			it's a 7 ball because 7 is my favourite number and this is my website
+			it's a 7 ball because 7 is my favourite number and this is my website.
 		</p>
 		<p class="text-center text-lg text-dark-blue/75 italic">
 			think of a question and recieve an unhelpful answer!
 		</p>
 	</div>
 	<button
-		class="m-12 h-75 w-75 self-center bg-[url('/imgs/ball.png')] bg-contain lg:h-100 lg:w-100"
+		class="ball m-12 h-75 w-75 self-center bg-[url('/imgs/ball.png')] bg-contain lg:h-100 lg:w-100"
+		onclick={gambleNow}
 	>
-		<h1 class="mb-8 text-4xl text-white">{gamble}</h1>
+		<h1 class="mb-8 max-w-1/2 mx-auto text-xl text-blue">{gamble}</h1>
 	</button>
 </main>
