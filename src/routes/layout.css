@@ -141,7 +141,8 @@
 }
 
 @keyframes ball {
-	0%, 100% {
+	0%,
+	100% {
 		transform: translate(0, 0) rotate(0deg);
 	}
 	25% {
@@ -156,14 +157,39 @@
 }
 
 .ball {
-    animation-play-state: paused;
-    transition-duration: 500ms;
+	animation-play-state: paused;
+	transition-duration: 500ms;
 }
 
 .ball:hover {
-    transform: scale(1.1, 1.1);
+	transform: scale(1.1, 1.1);
 }
 
 .ball:active {
-    animation: ball 0.1s ease-out 0s infinite forwards running;  
+	animation: ball 0.1s ease-out 0s infinite forwards running;
+}
+
+.music-container {
+	background-color: color-mix(in srgb, white 50%, transparent);
+	padding: 24px;
+	border-radius: 24px;
+	margin: 16px;
+	border: solid 1px color-mix(in srgb, var(--color-blue) 50%, transparent);
+	box-shadow: 0px 4px 0px color-mix(in srgb, var(--color-blue) 20%, transparent);
+	transition-duration: 100ms;
+}
+
+.music-container:hover {
+	box-shadow: 0px 8px 0px color-mix(in srgb, var(--color-blue) 20%, transparent);
+	padding: 32px;
+}
+
+.music-container-2 {
+	background-color: color-mix(in srgb, white 50%, transparent);
+	padding: 18px;
+	border-radius: 24px;
+	margin: 8px;
+	border: solid 1px color-mix(in srgb, var(--color-blue) 50%, transparent);
+	box-shadow: 0px 4px 0px color-mix(in srgb, var(--color-blue) 20%, transparent);
+	transition-duration: 100ms;
 }
