@@ -1,17 +1,23 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
 	import Contact from '$lib/Contact.svelte';
 
-	const hover = new Audio('/sounds/hover.mp3');
-	const click = new Audio('/sounds/click1.mp3');
+	let hover: HTMLAudioElement;
+	let click: HTMLAudioElement;
+
+	onMount(() => {
+		hover = new Audio('/sounds/hover.mp3');
+		click = new Audio('/sounds/click1.mp3');
+	});
 
 	function playHover() {
 		hover.currentTime = 0;
-		hover.play();
+		hover?.play();
 	}
 
 	function playClick() {
 		click.currentTime = 0;
-		click.play();
+		click?.play();
 	}
 </script>
 
@@ -66,8 +72,7 @@
 		</div>
 
 		<div class="m-6 grid grid-cols-1 gap-6 sm:grid-cols-2">
-			<a href="/more/music"
-				>
+			<a href="/more/music">
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
 				<!-- svelte-ignore a11y_no_static_element_interactions -->
 				<div class="more-box bg-light-teal" onclick={playClick} onmouseenter={playHover}>
@@ -76,30 +81,27 @@
 				</div></a
 			>
 
-			<a href="/more/digital-collectibles"
-				>
+			<a href="/more/digital-collectibles">
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
-				<!-- svelte-ignore a11y_no_static_element_interactions -->				
+				<!-- svelte-ignore a11y_no_static_element_interactions -->
 				<div class="more-box bg-white" onclick={playClick} onmouseenter={playHover}>
 					<h2 class="text-[32px] text-teal">digital collectibles</h2>
 					<img src="/imgs/more-collect.png" alt="" />
 				</div></a
 			>
 
-			<a href="/more/gamble"
-				>
+			<a href="/more/gamble">
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
-				<!-- svelte-ignore a11y_no_static_element_interactions -->				
+				<!-- svelte-ignore a11y_no_static_element_interactions -->
 				<div class="more-box bg-pink/13" onclick={playClick} onmouseenter={playHover}>
 					<h2 class="text-[32px] text-dark-pink">777luckykat?</h2>
 					<img src="/imgs/more-gamble.png" alt="" />
 				</div></a
 			>
 
-			<a href="/more/drawings"
-				>
+			<a href="/more/drawings">
 				<!-- svelte-ignore a11y_click_events_have_key_events -->
-				<!-- svelte-ignore a11y_no_static_element_interactions -->				
+				<!-- svelte-ignore a11y_no_static_element_interactions -->
 				<div class="more-box bg-light-yellow/45" onclick={playClick} onmouseenter={playHover}>
 					<h2 class="text-[48px] text-red">drawings</h2>
 					<img src="/imgs/more-draw.png" alt="" />

@@ -1,15 +1,24 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+
 	let { data } = $props();
 
-	const hover = new Audio('/sounds/hover.mp3');
-	const click = new Audio('/sounds/click1.mp3');
+	let hover: HTMLAudioElement;
+	let click: HTMLAudioElement;
+
+	onMount(() => {
+		hover = new Audio('/sounds/hover.mp3');
+		click = new Audio('/sounds/click1.mp3');
+	});
 
 	function playHover() {
+		if (!hover) return;
 		hover.currentTime = 0;
 		hover.play();
 	}
 
 	function playClick() {
+		if (!click) return;
 		click.currentTime = 0;
 		click.play();
 	}

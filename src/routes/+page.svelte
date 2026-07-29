@@ -13,10 +13,16 @@
 	let message = $state('');
 	let preset = $state('');
 
+	let hover: HTMLAudioElement;
+	let click: HTMLAudioElement;
+
 	onMount(() => {
 		const interval = setInterval(() => {
 			currentImgNumber = (currentImgNumber + 1) % imagePaths.length;
 		}, 5000);
+
+		hover = new Audio('/sounds/hover.wav');
+		click = new Audio('/sounds/click1.mp3');
 
 		return () => clearInterval(interval);
 	});
@@ -41,17 +47,14 @@
 		}
 	}
 
-	const hover = new Audio('/sounds/hover.wav');
-	const click = new Audio('/sounds/click1.mp3');
-
 	function playHover() {
 		hover.currentTime = 0;
-		hover.play();
+		hover?.play();
 	}
 
 	function playClick() {
 		click.currentTime = 0;
-		click.play();
+		click?.play();
 	}
 </script>
 
