@@ -5,7 +5,7 @@
 		</h2>
 		<h2 class="text-[14px] sm:text-[18px] text-dark-blue mt-4">
 			vaguely inspired by <a
-				href="dominicfike.com"
+				href="https://dominicfike.com"
 				target="_blank"
 				class="text-blue underline hover:decoration-wavy">dominicfike.com</a
 			>

@@ -30,6 +30,8 @@
 		"vite": "^8.0.16"
 	},
 	"dependencies": {
+		"discord.js": "^14.27.0",
+		"dotenv": "^17.4.2",
 		"gray-matter": "^4.0.3"
 	}
 }

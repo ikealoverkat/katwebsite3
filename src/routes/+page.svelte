@@ -10,6 +10,9 @@
 
 	const currentImage = $derived(imagePaths[currentImgNumber]);
 
+	let message = $state('');
+	let preset = $state('');
+
 	onMount(() => {
 		const interval = setInterval(() => {
 			currentImgNumber = (currentImgNumber + 1) % imagePaths.length;
@@ -17,6 +20,26 @@
 
 		return () => clearInterval(interval);
 	});
+
+	async function sendMessage() {
+		try {
+			await fetch('/api/message', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({
+					message,
+					preset
+				})
+			});
+			console.log(message + ' ' + preset);
+			message = '';
+			preset = '';
+		} catch (err) {
+			console.error(err);
+		}
+	}
 </script>
 
 <div class="bg-linear-to-b from-cream to-white">
@@ -277,16 +300,38 @@
 		<h1 class="text-[32px] text-dark-blue sm:text-[40px] md:text-[48px]">send a message to kat</h1>
 		<p class="text-[18px] text-dark-blue sm:text-[24px]">here are some preset options</p>
 		<div class="m-4 flex w-full flex-col gap-4 sm:m-8 sm:w-auto sm:flex-row sm:gap-6">
-			<button class="message-button bg-pink">you have too many words on your website</button>
-			<button class="message-button bg-light-yellow">fih ahh fih</button>
-			<button class="message-button bg-[#b9cbfe]">No <br /> I am working</button>
+			<button
+				class="message-button bg-pink"
+				onclick={() => {
+					preset = 'you have too many words on your website';
+					message = '';
+					sendMessage();
+				}}>you have too many words on your website</button
+			>
+			<button
+				class="message-button bg-light-yellow"
+				onclick={() => {
+					preset = 'fih ahh fih';
+					message = '';
+					sendMessage();
+				}}>fih ahh fih</button
+			>
+			<button
+				class="message-button bg-[#b9cbfe]"
+				onclick={() => {
+					preset = 'No I am Working';
+					message = '';
+					sendMessage();
+				}}>No <br /> I am working</button
+			>
 		</div>
 		<p class="text-[18px] text-dark-blue sm:text-[24px]">or you can</p>
 		<input
+			bind:value={message}
 			placeholder="write a message..."
 			type="text"
 			class="message-custom w-full outline sm:w-auto"
 		/>
-		<input type="submit" value="cool!" class="message-submit outline" />
+		<button class="message-submit outline" onclick={sendMessage}>cool!</button>
 	</div>
 </div>
