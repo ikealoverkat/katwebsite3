@@ -15,6 +15,7 @@
 
 	let hover: HTMLAudioElement;
 	let click: HTMLAudioElement;
+	let celebrate: HTMLAudioElement;
 
 	onMount(() => {
 		const interval = setInterval(() => {
@@ -23,6 +24,7 @@
 
 		hover = new Audio('/sounds/hover.wav');
 		click = new Audio('/sounds/click1.mp3');
+		celebrate = new Audio('/sounds/yay.mp3');
 
 		return () => clearInterval(interval);
 	});
@@ -55,6 +57,11 @@
 	function playClick() {
 		click.currentTime = 0;
 		click?.play();
+	}
+	
+	function playCelebrate() {
+		celebrate.currentTime = 0;
+		celebrate?.play();
 	}
 </script>
 
@@ -359,8 +366,9 @@
 			onclick={() => {
 				sendMessage();
 				playClick();
+				playCelebrate();
 			}}
-			onmouseenter={playHover}>cool!</button
+			onmouseenter={playHover} disabled={!message}>cool!</button
 		>
 	</div>
 </div>

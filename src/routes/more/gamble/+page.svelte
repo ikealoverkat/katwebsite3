@@ -1,6 +1,36 @@
 <script lang="ts">
 	let gamble: string = $state('click & hold');
 	let gambleNumber: number = 0;
+	import { onMount } from 'svelte';
+
+	let hover: HTMLAudioElement;
+	let click: HTMLAudioElement;
+	let shake: HTMLAudioElement;
+	let celebrate: HTMLAudioElement;
+
+	onMount(() => {
+		hover = new Audio('/sounds/hover.mp3');
+		click = new Audio('/sounds/click1.mp3');
+		shake = new Audio('/sounds/shake.mp3');
+	});
+
+	function playHover() {
+		if (!hover) return;
+		hover.currentTime = 0;
+		hover.play();
+	}
+
+	function playClick() {
+		if (!click) return;
+		click.currentTime = 0;
+		click.play();
+	}
+
+	function playShake() {
+		if (!shake) return;
+		shake.currentTime = 0;
+		shake.play();
+	}
 
 	const ballOptions = [
 		'it is certain',
@@ -62,7 +92,7 @@
 	</div>
 	<button
 		class="ball m-12 h-75 w-75 self-center bg-[url('/imgs/ball.png')] bg-contain lg:h-100 lg:w-100"
-		onclick={gambleNow}
+		onmousedown={playShake} onclick={gambleNow}
 	>
 		<h1 class="mb-8 max-w-1/2 mx-auto text-xl text-blue">{gamble}</h1>
 	</button>
