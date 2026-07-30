@@ -1,5 +1,9 @@
 <script lang="ts">
-    let drawings = Object.keys(import.meta.glob('$lib/assets/drawings/*'))
+    let drawings = Object.values(import.meta.glob('$lib/assets/drawings/*', {
+		query: '?url',
+        eager: true,
+        import: 'default'
+    }))
 </script>
 
 <div class="flex flex-col">
