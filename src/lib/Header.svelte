@@ -28,7 +28,7 @@
 		<a href="/blog" onclick={playClick} onmouseenter={playHover}>blog</a>
 		<a href="/more" onclick={playClick} onmouseenter={playHover}>etc</a>
 	</div>
-	<h2 class="hidden md:inline text-[14px] text-teal sm:text-[20px] md:text-[24px]">
+	<a href="seal" class="hidden md:inline text-[14px] text-teal sm:text-[20px] md:text-[24px]">
 		graphic design is my passion!!!!!!
-	</h2>
+	</a>
 </div>
