@@ -13,6 +13,12 @@ yay!
 - made wiith sveltekit (typescript) & tailwind css
 - deployed on vercel
 
+![landing page](/static/screenshot1.png)
+![message sending thing](/static/screenshot2.png)
+![blog page](/static/screenshot4.png)
+![misc page](/static/screenshot3.png)
+
+
 ---
 
 ## commands
